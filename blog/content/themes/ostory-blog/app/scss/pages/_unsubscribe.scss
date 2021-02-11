@@ -1,0 +1,204 @@
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.newsletter__unsubscribe-newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+
+.newsletter__unsubscribe-newsletter__form__email input {
+  border: solid 1px $hover-color;
+  height: 2em;
+  width: 15em;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 1em 1em 0;
+}
+
+.newsletter__unsubscribe-newsletter__form__submit input {
+  background-color: $background-color-red;
+  color: $font-color;
+  border-radius: 10px;
+  border: none;
+  padding: 0.4em 0.2em;
+  width: 5.2em;
+}
+
+.newsletter__unsubscribe-newsletter {
+  min-height: 60vh;
+  margin-top: 6em;
+
+  h5 {
+    margin-bottom: 1rem;
+  }
+}
+
+.confirmation-false {
+  font-size: 0.7em;
+  color: red;
+}
+
+.confirmation-true {
+  font-size: 0.7em;
+  color: green;
+}
+
+// ======================== SECTION FOOTER ========================
+.footer-un {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 1em;
+  background-color: $background-color;
+  width: 100%;
+  font-size: 1.5em;
+
+  &__social,
+  &__logo {
+    padding-top: 1em;
+    width: 100%;
+  }
+
+  //======================== SECTION SOCIAL ICONS ========================
+  &__social {
+    border-top: solid 1px $hover-color;
+
+    &__text {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0.3em;
+      padding: 0 0.3em;
+      font-size: 1.5em;
+    }
+  }
+
+  // ======================== SECTION OSTORY LOGO ========================
+
+  &__logo {
+    margin-top: 0.7em;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  &__logo img {
+    width: 5em;
+  }
+
+  &__logo > a {
+    color: $background-color-red;
+  }
+
+  &__logo p {
+    font-size: 0.5em;
+    margin-top: 0.6em;
+  }
+}
+
+// ======================== SECTION RESPONSIVE BREAKPOINTS ========================
+
+@media (min-width: $breakpoint-medium) {
+  .newsletter__unsubscribe-newsletter__form__email input {
+    margin-right: 1em;
+  }
+
+  .footer-un {
+    &__social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &__text {
+        width: 100%;
+      }
+
+      &__icons {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-top: 0.3em;
+        padding: 0 0.3em;
+        font-size: 1.5em;
+      }
+    }
+
+    &__legal {
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .newsletter__unsubscribe-newsletter__form {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: $breakpoint-extralarge) {
+
+    .newsletter {
+        min-height: 44rem;
+    }
+
+  .footer-un {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &__social,
+    &__logo {
+      font-size: 1em;
+    }
+
+    &__logo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      margin-top: 0;
+
+    
+    & a {
+        text-align: left;
+        width: 100%;
+      }
+
+      & p {
+        margin-top: -1.4rem;
+        margin-left: 1rem;
+      }
+    }
+
+    &__social {
+      border: none;
+      display: flex;
+
+      &__icons {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-top: 0.2em;
+        padding: 0 0.3em;
+        font-size: 2em;
+      }
+    }
+  }
+
+  .newsletter {
+    margin: 0;
+    border-top: solid 1px $hover-color;
+  }
+}
+

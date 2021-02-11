@@ -1,0 +1,125 @@
+  .sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+      font-size: $font-size-title;
+      text-shadow: 2px 2px 2px $hover-color;
+      text-align: center;
+      margin: 2em 0 1em 0;
+    }
+
+    &__error-message {
+      align-self: center;
+      color: $background-color-red;
+      margin-bottom: .5em;
+    }
+    
+    &__form {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient($hover-color, lighten($background-color, 15%));
+      background-size: cover;
+      border-radius: 10px;
+      padding: 1em;
+
+      &__label {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      &__required {
+        color: $background-color-red;
+      }
+
+      &__input {
+        margin: .5em auto;
+        padding: .5em;
+        width: 80%;
+        color: $background-color;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+
+      }
+
+      &__submit-button {
+        width: 40%;
+        margin: .5em auto;
+        padding: .3em;
+        border-radius: 5px;
+        background: none;
+        border: 1px solid $font-color;
+        color: $font-color;
+
+        &:hover {
+          color: $background-color;
+          background-color: $font-color;
+        }
+      }
+
+      &__caption {
+        align-self: center;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $background-color;
+      }
+    }
+  }
+
+  // ========= SECTION MEDIA MEDIUM =========
+
+@media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .sign-up__form {
+    width: 70%;
+
+    &__input {
+      width: 75%;
+    }
+
+    &__submit-button {
+      width: 30%;
+    }
+  }
+}
+
+  // ========= SECTION MEDIA LARGE =========
+
+@media screen and (min-width: $breakpoint-large) and (max-width: $breakpoint-extralarge) {
+  .sign-up__form {
+    width: 50%;
+
+    &__input {
+      width: 65%;
+    }
+
+    &__submit-button {
+      width: 25%;
+    }
+  }
+}
+
+  // ========= SECTION MEDIA EXTRA LARGE =========
+
+  @media screen and (min-width: $breakpoint-extralarge) {
+    .sign-up__form {
+      width: 30%;
+  
+      &__input {
+        width: 65%;
+      }
+  
+      &__submit-button {
+        width: 20%;
+      }
+    }
+  }
+  

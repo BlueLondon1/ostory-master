@@ -1,0 +1,152 @@
+// ======================== SECTION GENERAL FOOTER ========================
+.footer {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 1em;
+  background-color: $background-color;
+  width: 100%;
+  font-size: 1.5em;
+
+  &__social,
+  &__logo,
+  &__blog {
+    padding-top: 1em;
+    width: 100%;
+    // ==== REVIEW lignes inutiles ? voir code blog
+    margin: 0 auto;
+    text-align: center;
+    // ==================
+  }
+
+  &__legal {
+    &:hover {
+      color: $hover-color;
+    }
+  }
+  
+  &__blog h5,
+  &__blog a {
+    font-size: 0.8em;
+  }
+  &__blog h5 {
+    margin-bottom: 1.5em;
+  }
+  &__link {
+    text-shadow: 2px 2px 2px $hover-color;
+    margin-top: 0.7em;
+    border: 1px solid $font-color;
+    border-radius: 5px;
+    padding: 0.5em;
+    &:hover {
+      color: $hover-color;
+      border: 1px solid $hover-color;
+    }
+  }
+
+  //======================== SECTION SOCIAL ICONS ========================
+  &__social {
+    border-top: solid 1px $hover-color;
+    &__text {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.3em;
+    }
+    &__icons {
+      display: flex;
+      justify-content: space-around;
+      padding: 0 0.3em;
+      font-size: 1.5em;
+    }
+    &__icon {
+      padding: 0 0.5em;
+      font-size: 1.3em;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+
+  // ======================== SECTION OSTORY LOGO ========================
+  &__logo {
+    margin-top: 0.7em;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+  }
+  &__logo img {
+    width: 5em;
+  }
+  &__logo > a {
+    color: $background-color-red;
+  }
+  &__logo p {
+    font-size: 0.5em;
+    margin-top: 0.6em;
+  }
+}
+
+// ======================== SECTION RESPONSIVE BREAKPOINTS ========================
+
+@media (min-width: $breakpoint-medium) {
+  .footer {
+    &__social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      &__text {
+        width: 100%;
+      }
+      &__icons {
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        margin-top: 0.3em;
+        padding: 0 0.3em;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-extralarge) {
+  .footer {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    &__blog,
+    &__social,
+    &__logo {
+      font-size: 1em;
+    }
+    &__logo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0;
+      & a {
+        width: 100%;
+      }
+      & p {
+        margin-top: 0;
+      }
+    }
+    &__blog {
+      border-top: solid 1px $hover-color;
+    }
+    &__social {
+      border: none;
+      display: flex;
+      margin-top: 0;
+      &__icons {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-top: 0.3em;
+        padding: 0 0.3em;
+        font-size: 1em;
+      }
+      &__icon {
+        font-size: 1.5em;
+      }
+    }
+  }
+}

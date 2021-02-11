@@ -1,0 +1,47 @@
+// ====== SECTION FONTS  ======
+$fa-font-path:  '~font-awesome/fonts';
+$font404 : 'Permanent Marker', cursive;
+$font-family: 'Assistant';
+$font-family-fallback: 'Arial, sans serif';
+
+
+// ====== SECTION FONT SIZES ======
+$font-size: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+
+
+// ====== SECTION RESPONSIVE BREAKPOINTS ======
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extralarge: 1200px;
+
+
+// =========== SECTION COLORS ===========
+$dark-grey: #2A3740;
+$grey: lighten(#2A3740, 10%);
+$grey-blue: #7EA5BF;
+$red: #CC3C39; 
+$dark-red: darken($red, 50%);
+$white-beige: #F2ECDC;
+$black: #000;
+
+$background-color: $dark-grey;
+$font-color: $white-beige;
+$hover-color: $grey-blue;
+$background-color-story: $grey;
+$background-color-red: $red;
+$color-bg-alt: $black;
+
+$posts-bg-colors: (
+    1: $hover-color,
+    2: $background-color-red,
+    3: $background-color,
+);
+
+
+// ====== SECTION ANIMATIONS ======
+$duration-slow: 0.9s;
+$duration-medium: 0.5s;
+$duration-fast: 0.3s;

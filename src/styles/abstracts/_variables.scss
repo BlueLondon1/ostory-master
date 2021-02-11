@@ -1,0 +1,33 @@
+// =========== SECTION FONTS ===========
+$font404 : 'Permanent Marker', cursive;
+$font-family: 'Assistant';
+$font-family-story: 'KoHo';
+$font-family-fallback: 'Arial, sans serif';
+
+// ====== SECTION FONT SIZES ======
+$font-size: 16px;
+$font-size-medium: 18px;
+$font-size-large: 20px;
+
+$font-size-title: 2.5em;
+
+// =========== SECTION RESPONSIVE BREAKPOINTS ===========
+$breakpoint-medium: 500px;
+$breakpoint-large: 750px;
+$breakpoint-extralarge: 1300px;
+
+// =========== SECTION COLORS ===========
+$dark-grey: #2A3740;
+$grey: lighten(#2A3740, 10%);
+$grey-blue: #7EA5BF;
+$red: #CC3C39; 
+$dark-red: darken($red, 50%);
+$white-beige: #F2ECDC;
+$black: #000;
+
+$background-color: $dark-grey;
+$font-color: $white-beige;
+$hover-color: $grey-blue;
+$background-color-story: $grey;
+$background-color-red: $red;
+$color-bg-alt: $black;

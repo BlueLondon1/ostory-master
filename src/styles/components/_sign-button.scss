@@ -1,0 +1,24 @@
+.header_sign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 20;
+}
+
+.header_sign-up,
+.header_sign-in,
+.header_sign-out {
+  background-color: $background-color-red;
+  box-shadow: 1px 3px $dark-red;
+  color: $font-color;
+  border-radius: 10px;
+  border: none;
+  margin: 0.3em;
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+.header_sign-out {
+  width: 6.5em;
+}

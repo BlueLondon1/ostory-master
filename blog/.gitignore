@@ -1,0 +1,16 @@
+notes/
+/vendor/
+/wp/
+wp-config.php
+/content/languages
+/content/*
+!/content/plugins/
+/content/plugins/*
+!/content/plugins/ostory-settings
+!/content/plugins/ostory-custom-database
+!/content/plugins/Basic-Auth
+!/content/themes/
+/content/themes/*
+!/content/themes/ostory-blog
+node_modules 
+.htaccess

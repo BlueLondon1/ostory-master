@@ -1,0 +1,58 @@
+.intro {
+  font-weight: 700;
+  width: 100%;
+
+  &__title {
+    font-size: 2.2em;
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__content {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+    width: 100%;
+  }
+
+  &__404 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: $color-bg-alt;
+    font-family: $font404;
+  }
+
+  &__content404 {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+    color: $color-bg-alt;
+    font-family: $font404;
+  }
+
+  &__link404 {
+    font-size: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+    color: $color-bg-alt;
+    font-family: $font404;
+
+    &:hover {
+      color: $background-color-red;
+    }
+  }
+
+  // ============ SECTION RESPONSIVE BREAKPOINTS ============
+
+  @media (min-width: $breakpoint-medium) {
+    width: 60%;
+
+    &__title {
+      text-align: start;
+    }
+  }
+
+  @media (min-width: $breakpoint-large) {
+    width: 50%;
+  }
+}

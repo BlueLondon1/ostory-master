@@ -1,0 +1,32 @@
+.singular {
+    padding: 2em;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index:10; 
+    text-align: start;
+}
+
+.single {
+
+    &__title {
+        text-align: start;
+        padding-left: 2em;
+        font-size: 1.2em;
+        font-weight: 700;
+        padding-bottom: 0.2em;
+        border-bottom: 3px solid $font-color;
+        text-transform: uppercase;
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+
+    &__content {
+        max-width: 89%;;
+    }
+
+    &__space {
+        margin-top: 2em;
+    }
+
+}

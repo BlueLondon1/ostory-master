@@ -1,0 +1,30 @@
+.filter-desktop {
+  width: 90%;
+  margin: 10% auto 0;
+  border: 1px solid $hover-color;
+  border-radius: 10px;
+  padding: 5%;
+  &__title {
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    &__tag {
+      width: 50%;
+      margin-bottom: 5%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-extralarge) {
+  .filter-desktop {
+    &__tags {
+      &__tag {
+        width: calc(100% / 3);
+      }
+    }
+  }
+}

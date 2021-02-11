@@ -1,0 +1,38 @@
+.action-bar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 0.5rem;
+}
+
+.action-button {
+    margin: 0 2em 1em 0;
+    color: $hover-color;
+    font-weight: 700;
+    font-size: 0.8em;
+    border: 3px solid $hover-color;
+    padding: 0.4em 0.6em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: border $duration-fast,
+                padding $duration-medium,
+                color $duration-slow;
+
+    &:hover {
+        color: $background-color-red;
+        border-color: $background-color-red;
+        padding-right: 4em;
+
+        &::after {
+            display: inline-block;
+            transform: scaleX(4);
+        }
+    }
+
+    &::after {
+        content: '\f178';
+        font-family: 'FontAwesome';
+        padding-left: 1em;
+        transition: transform $duration-slow;
+    }
+}

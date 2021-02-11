@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  padding: 0.5em;
+  position: fixed;
+  z-index: 20;
+  background-color: $background-color;
+  width: 100%;
+}
+
+.header_logo {
+margin: 0.5em 1em;
+z-index: 20;
+
+& img {
+    width: 5em;
+}
+
+& a {
+  font-size: 1.5em;
+  color: $background-color-red;
+} 
+} 
+
+// menus are not displayed while for small screens
+.header_nav, .header_sign-up, .header_sign-in, .header_sign-out {
+  display: none;
+}
+
+
+
+// ====== SECTION RESPONSIVE BREAKPOINTS ======
+@media (min-width: $breakpoint-large) {
+      
+  // display hidden menus for extra large screens
+  .header_nav, .header_sign-up, .header_sign-in, .header_sign-out {
+      display: block;
+  }
+
+  // hide burger menu
+  .header_burger, .header_burger_label, .header_burger_nav {
+      display: none;
+  } 
+
+  .header {
+      display: grid;
+      grid-template-columns: 30% 55% 15%;
+      line-height: 1.5em;
+      padding: 0 1em;
+      position: fixed;
+      z-index: 20;
+      background-color: $background-color;
+      font-size: 0.8em;
+      width: 100%;
+      align-items: center;
+  }
+  
+  .header_logo a {
+      font-size: 2em;
+      color: $background-color-red;
+  } 
+}

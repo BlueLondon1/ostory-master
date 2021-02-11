@@ -1,0 +1,47 @@
+  .catalogue {
+    margin-top: 20%;
+    &__left-side {
+      display: none;
+    }
+    &__right-side {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__title {
+      text-shadow: 2px 2px 2px $hover-color;
+      font-size: $font-size-title;
+      text-align: center;
+      margin-bottom: 5%;
+    }
+  }
+
+@media screen and (min-width: $breakpoint-large) {
+  .catalogue {
+    margin-top: 10%;
+    display: flex;
+    &__left-side {
+      display: block;
+      width: 50%;
+    }
+    &__right-side {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-extralarge) {
+  .catalogue {
+    width: 80%;
+    margin: 5% auto;
+    &__left-side {
+      display: block;
+      width: 50%;
+    }
+    &__right-side {
+      width: 50%;
+    }
+  }
+}

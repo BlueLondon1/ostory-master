@@ -1,0 +1,97 @@
+.adventure__content {
+  width: 90%;
+  margin: 5% auto;
+  padding: 5%;
+  font-family: 'KoHo', sans-serif;
+  background: radial-gradient(farthest-corner ellipse at top left, lighten($background-color, 20%), $background-color-story);
+  box-shadow: inset .5em .5em .5em darken($background-color, 1%), inset -.5em -.5em .5em darken($background-color, 1%);
+  line-height: 1.4;
+  border-radius: 5px;
+
+  p {
+    margin-bottom: 1%;
+  }
+
+  blockquote {
+    margin: 3% 0;
+    text-align: center;
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  strong {
+    color: #ffffff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+      &:hover {
+        text-decoration: none;
+        color: #ffffff;
+        -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+        animation: neon2 1.5s ease-in-out infinite alternate;
+    }
+  }
+
+  @keyframes neon1 {
+    from {
+      text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 40px #ff1177, 
+      0 0 70px #ff1177, 
+      0 0 80px #ff1177,
+      0 0 100px #ff1177, 
+      0 0 150px #ff1177;
+    }
+    to {
+      text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 15px #fff, 
+      0 0 20px #ff1177, 
+      0 0 35px #ff1177, 
+      0 0 40px #ff1177,
+      0 0 50px #ff1177, 
+      0 0 75px #ff1177;
+    }
+  }
+
+  @keyframes neon2 {
+    from {
+      text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 40px #FFDD1B, 
+      0 0 70px #FFDD1B, 
+      0 0 80px #FFDD1B,
+      0 0 100px #FFDD1B, 
+      0 0 150px #FFDD1B;
+    }
+    to {
+      text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 15px #fff, 
+      0 0 20px #FFDD1B, 
+      0 0 35px #FFDD1B, 
+      0 0 40px #FFDD1B,
+      0 0 50px #FFDD1B, 
+      0 0 75px #FFDD1B;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-large) {
+  .adventure__content {
+    padding: 2%;
+  }
+}

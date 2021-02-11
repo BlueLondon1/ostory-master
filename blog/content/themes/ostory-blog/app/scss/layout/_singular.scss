@@ -1,0 +1,63 @@
+.singular {
+    background-color: $color-bg-alt;
+    min-height: 50vh;
+    padding: 8em 2em 2em 2em;
+    background-size: cover;
+    background-position: bottom ;
+    position: relative;
+
+    .single {
+
+        margin-top: 3.5em;
+
+        &__title {
+            text-align: center;
+            text-shadow: 2px 2px 2px $hover-color;
+        }
+
+        &__text {
+            margin-bottom: 1em;
+            background-color: transparentize(black, 0.6);
+            border-radius: 5px;
+            line-height: 1.2em;
+            padding: 0.5em;
+
+            p {
+                margin-bottom: 1em;
+            }
+        }
+
+        &__text__viewcount {
+            color: $background-color-red;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    } 
+}
+
+// ================= SECTION RESPONSIVE BREAKPOINTS =================
+
+@media (min-width: $breakpoint-medium) {
+
+    .singular {
+        min-height: 80vh;
+
+        .single {
+            width: 75%;
+            margin: auto;
+            margin-top: 3.5em
+        }
+    }
+    
+}
+
+@media (min-width: $breakpoint-large) {
+    .singular {
+        min-height: 85vh;
+
+        .single {
+            width: 50%;
+        }
+    }
+    
+}

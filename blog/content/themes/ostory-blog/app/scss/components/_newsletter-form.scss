@@ -1,0 +1,70 @@
+.footer__newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+.newsletter-email input {
+    border: solid 1px $hover-color;
+    height: 2em;
+    width: 15em;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 1em 1em 0;
+}
+
+.newsletter-submit input {
+    background-color: $background-color-red;
+    color: $font-color;
+    border-radius: 10px;
+    border: none;
+    padding: 0.4em 0.2em;
+    width: 5.2em;  
+}
+
+.unsubscribe-newsletter {
+    min-height: 60vh;
+    margin-top: 6em;
+}
+
+.confirmation-false {
+    font-size: .7em;
+    color: red;
+}
+
+.confirmation-true {
+    font-size: .7em;
+    color: green;
+}
+
+// ============ SECTION RESPONSIVE BREAKPOINTS ============
+
+@media (min-width: $breakpoint-medium) {
+    .newsletter-email input {
+        margin-right: 1em;
+    }
+}
+
+
+@media (min-width: $breakpoint-large) {
+    .newsletter-form {
+        display: flex;
+        flex-wrap: nowrap;  
+    }
+}
+
+@media (min-width: $breakpoint-extralarge) {
+    .footer_newsletter {
+        margin: 0;
+        border-top: solid 1px $hover-color;
+    }   
+}

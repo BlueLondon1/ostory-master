@@ -1,0 +1,23 @@
+.header_nav {
+    padding-right: 1em;
+    z-index: 20;
+
+    &_list {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-shadow: 2px 2px 2px black;
+            font-size: 1.5em;
+        }
+    }
+
+    &_list_item a:hover {
+        color: $hover-color;
+        text-decoration: none;
+    }
+
+    &_list_item_active {
+        color: $hover-color;
+    }
+}

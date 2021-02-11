@@ -1,0 +1,321 @@
+.wrapper {
+  box-sizing: border-box;
+
+  p,
+  h3 {
+    text-shadow: 2px 2px 2px $hover-color;
+  }
+}
+
+
+// =========================================================
+// =============== SECTION BANNER ==========================
+// =========================================================
+
+.banner {
+  background-image: url(/src/images/night-sky.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $hover-color;
+  border-top: 1px solid $hover-color;
+}
+
+.intro {
+  transform: translatey(0px);
+  animation: float 7s ease-in-out infinite;
+
+  &__logo img {
+    width: 9em;
+  }
+
+  &__content-1 {
+    font-size: 0.8em;
+    margin-top: 1em;
+  }
+
+  &__content-2 {
+    font-size: 1.2em;
+    color: $background-color-red;
+    text-align: right;
+    padding-left: 5rem;
+  }
+}
+
+
+// =========================================================
+// =============== SECTION PRESENTATION TEXT ===============
+// =========================================================
+
+.presentation {
+  margin-top: 1em;
+
+  p {
+    padding: 0 1em;
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    font-family: "Permanent Marker", sans-serif;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: "KoHo", sans-serif;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+
+  // ===========================================================
+  // =============== SECTION PRESENTATION IMAGES ===============
+  // ===========================================================
+
+  &__img-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+  }
+
+  &__img-box__boxes img {
+    width: 80%;
+    border: 1px solid $hover-color;
+    border-radius: 10px;
+    box-shadow: 5px 10px 40px 5px rgba(0, 0, 0, 0.5);
+    margin: 2em 0;
+  }
+
+  &__img-box__boxes__title {
+    position: absolute;
+    top: 6.5em;
+    left: 2.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  &__img-box__boxes__text {
+    position: absolute;
+    top: 4.5em;
+    left: 3.5em;
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: bold;
+
+    a {
+      color: $background-color-red;
+    }
+  }
+
+
+  // =========================================================
+  // ============== SECTION TEXT ANIMATION GLOW ==============
+  // =========================================================
+
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 40px #ff1177, 
+      0 0 70px #ff1177, 
+      0 0 80px #ff1177,
+      0 0 100px #ff1177, 
+      0 0 150px #ff1177;
+    }
+    to {
+      text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 15px #fff, 
+      0 0 20px #ff1177, 
+      0 0 35px #ff1177, 
+      0 0 40px #ff1177,
+      0 0 50px #ff1177, 
+      0 0 75px #ff1177;
+    }
+  }
+
+  @-webkit-keyframes neon2 {
+    from {
+      text-shadow: 
+      0 0 10px #fff, 
+      0 0 20px #fff, 
+      0 0 30px #fff, 
+      0 0 40px #228dff, 
+      0 0 70px #228dff, 
+      0 0 80px #228dff,
+      0 0 100px #228dff, 
+      0 0 150px #228dff;
+    }
+    to {
+      text-shadow: 
+      0 0 5px #fff, 
+      0 0 10px #fff, 
+      0 0 15px #fff, 
+      0 0 20px #228dff, 
+      0 0 35px #228dff, 
+      0 0 40px #228dff,
+      0 0 50px #228dff, 
+      0 0 75px #228dff;
+    }
+  }
+
+
+  // =========================================================
+  // =========== SECTION ANIMATION FLOAT =====================
+  // =========================================================
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+
+    50% {
+      transform: translatey(-7px);
+    }
+
+    100% {
+      transform: translatey(0px);
+    }
+  }
+}
+
+
+//====================================================================
+// ================= SECTION RESPONSIVE MEDIUM 500px =================
+// ===================================================================
+
+@media (min-width: $breakpoint-medium) {
+  .presentation__img-box__boxes {
+    &__title {
+      top: 7em;
+      left: 4em;
+    }
+
+    &__text {
+      top: 5em;
+      left: 5em;
+    }
+  }
+}
+
+
+// ==================================================================
+// ================= SECTION RESPONSIVE LARGE 750px =================
+// ==================================================================
+
+@media (min-width: $breakpoint-large) {
+  .presentation__img-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4em;
+
+    img {
+      width: 92%;
+    }
+  }
+
+  .presentation__img-box__boxes {
+    &__title {
+      top: 6em;
+      left: 1.5em;
+      font-size: 1em;
+    }
+
+    &__text {
+      top: 4em;
+      left: 2.3em;
+      font-size: 1.8em;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+      -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+      -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+      animation: neon1 1.5s ease-in-out infinite alternate;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &__img-box__boxes__text a:hover {
+      text-decoration: none;
+      color: #ffffff;
+      -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+      -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+      animation: neon2 1.5s ease-in-out infinite alternate;
+    }
+  }
+}
+
+
+// =========================================================================
+// ================= SECTION RESPONSIVE EXTRA LARGE 1300px =================
+// =========================================================================
+
+@media (min-width: $breakpoint-extralarge) {
+  .intro {
+    &__logo img {
+      width: 15em;
+    }
+
+    &__content-1 {
+      font-size: 1em;
+      margin-top: 1em;
+    }
+
+    &__content-2 {
+      font-size: 2.5em;
+      color: $background-color-red;
+      text-align: right;
+    }
+  }
+
+  .presentation {
+    &__text {
+      margin-top: 3em;
+      margin-bottom: 3em;
+    }
+
+    &__text p {
+      font-size: 2em;
+    }
+
+    &__img-box__boxes img {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &__img-box__boxes img:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  .presentation__img-box__boxes {
+    &__title {
+      top: 5.5em;
+      left: 1em;
+      font-size: 2em;
+    }
+
+    &__text {
+      top: 3.7em;
+      left: 2.5em;
+      font-size: 3.5em;
+    }
+  }
+}

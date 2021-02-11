@@ -1,0 +1,42 @@
+.catalogue {
+
+  &__searchbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+
+    &__input {
+      width: 70%;
+      padding-right: 7%;
+      border: none;
+      border-radius: 3px;
+      text-align: center;
+      color: $background-color;
+      
+      &::placeholder {
+        color: $hover-color;
+      }
+    }
+
+    &__icon {
+      cursor: pointer;
+      color: $background-color;
+      position: absolute;
+      right: 20%;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-extralarge) {
+  .catalogue {
+    &__searchbar {
+      width: 75%;
+    }
+  }
+}

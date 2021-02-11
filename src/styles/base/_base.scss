@@ -1,0 +1,16 @@
+body {
+  font-family: $font-family, $font-family-fallback;
+  background: url('../images/dragon-solid.png'), $background-color;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: $font-color;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

@@ -1,0 +1,108 @@
+.slider {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: .8em;
+
+    &__icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      padding: 2%;
+      cursor: pointer;
+    }
+   
+    &__slides {
+        position: relative;
+        width: 300%;
+        display: flex;
+        animation: slide 15s infinite;
+
+        &__slide {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+
+            &:before {
+              content: "";
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              background: transparentize($background-color, .5);
+              z-index: 0;
+            }
+
+            &__description {
+              width: 100%;
+              position: relative;
+              text-align: center;
+
+              &__title {
+                font-size: 2em;
+                margin: 3% 0;
+              }
+
+              &__tags {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-bottom: 3%;
+                &__tag {
+                  width: 50%;
+                }
+              }
+
+              &__resume {
+                margin-bottom: 3%;
+                font-style: italic;
+              }
+
+              &__learn-more {
+                width: 40%;
+                margin: auto;
+                border : 1px solid $font-color;
+                border-radius: 5px;
+
+                &:hover {
+                  background-color: $font-color;
+                }
+                a:hover {
+                  color: $background-color;
+                }
+              }
+            }
+        }
+    }
+
+    .pause {
+      animation-play-state: paused;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-33.33%);
+    }
+    58% {
+        transform: translateX(-33.33%);
+    }
+    66% {
+        transform: translateX(-66.66%);
+    }
+    92% {
+        transform: translateX(-66.66%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

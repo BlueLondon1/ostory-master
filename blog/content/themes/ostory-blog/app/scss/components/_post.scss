@@ -1,0 +1,50 @@
+.post {
+    padding: 2em;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index:10;
+
+    &::after {
+        content: '';
+        background-color: $color-bg-alt;
+        opacity: 0.8;
+        position: absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        z-index: -1;
+        transition: opacity $duration-fast;
+    }
+
+    &:hover::after {
+        background-color: $color-bg-alt !important;
+        opacity: 0.3;
+    }
+
+    @each $index, $color in $posts-bg-colors {
+        &:nth-child(3n+#{$index})::after {
+            background-color: $color;
+        }
+    }
+
+    &__title {
+        font-size: 1.2em;
+        font-weight: 700;
+        padding-bottom: 0.2em;
+        border-bottom: 3px solid $font-color;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        margin-top: 1em;
+    }
+
+    
+    // ========= SECTION RESPONSIVE BREAKPOINTS =========
+
+    @media (min-width: $breakpoint-extralarge) {
+        min-height: 40vh;
+    }
+}

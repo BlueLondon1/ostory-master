@@ -1,0 +1,42 @@
+// adventure : display all choices
+export const DISPLAY_CHOICES = 'DISPLAY_CHOICES';
+export const HIDE_CHOICES = 'HIDE_CHOICES';
+
+// display current id adventure
+export const FETCH_ADVENTURE_DATAS = 'FETCH_ADVENTURE_DATAS';
+export const RECEIVED_ADVENTURE_DATAS = 'RECEIVED_ADVENTURE_DATAS';
+
+// display all adventures
+export const FETCH_ADVENTURES_DATAS = 'FETCH_ADVENTURES_DATAS';
+export const RECEIVED_ADVENTURES_DATAS = 'RECEIVED_ADVENTURES_DATAS';
+
+// catalogue searchbar
+export const ADVENTURE_SEARCHBAR_INPUT = 'ADVENTURE_SEARCHBAR_INPUT';
+export const DELETE_SEARCHBAR_INPUT = 'DELETE_SEARCHBAR_INPUT';
+
+// tags infos
+export const FETCH_UNIVERSES_DATAS = 'FETCH_UNIVERSES';
+export const RECEIVED_UNIVERSES_DATAS = 'RECEIVED_UNIVERSES';
+export const FETCH_GENRES_DATAS = 'FETCH_GENRES';
+export const RECEIVED_GENRES_DATAS = 'RECEIVED_GENRES';
+
+// tags filters
+export const ADD_UNIVERSE_TO_FILTER = 'ADD_UNIVERSE_TO_FILTER';
+export const REMOVE_UNIVERSE_FROM_FILTER = 'REMOVE_UNIVERSE_FROM_FILTER';
+export const ADD_GENRE_TO_FILTER = 'ADD_GENRE_TO_FILTER';
+export const REMOVE_GENRE_FROM_FILTER = 'REMOVE_GENRE_FROM_FILTER';
+export const EMPTY__FILTERS = 'EMPTY__FILTERS';
+
+// user
+export const SIGN_UP = 'SIGN_UP';
+export const SEND_USER_INFOS_SIGNUP = 'SEND_USER_INFOS_SIGNUP';
+export const SIGN_IN = 'SIGN_IN';
+export const SEND_USER_INFOS_SIGNIN = 'SEND_USER_INFOS_SIGNIN';
+export const LOGIN = 'LOGIN';
+export const STILL_LOGGEDIN = 'STILL_LOGGEDIN';
+export const LOGOUT = 'LOGOUT';
+export const ERROR_MESSAGE = 'ERROR_MESSAGE';
+
+// carousel
+export const PAUSE_CAROUSEL = 'PAUSE_CAROUSEL';
+export const START_CAROUSEL = 'START_CAROUSEL';

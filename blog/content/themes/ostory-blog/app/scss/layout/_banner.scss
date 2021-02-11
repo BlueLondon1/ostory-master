@@ -1,0 +1,45 @@
+.banner {
+  background-color: $color-bg-alt;
+  min-height: 50vh;
+  padding: 7em 2em 2em 2em;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  z-index: 10;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, transparentize($color-bg-alt, 0), transparentize($color-bg-alt, 1));
+    z-index: -1;
+  }
+}
+
+.banner404 {
+  background-color: $color-bg-alt;
+  min-height: 50vh;
+  padding: 8em 2em 2em 2em;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  z-index: 10;
+  background-position: center;
+}
+
+// ============ SECTION RESPONSIVE BREAKPOINTS ============
+
+.banner {
+  @media (min-width: $breakpoint-medium) {
+    min-height: 75vh;
+  }
+}
+
+.banner404 {
+  @media (min-width: $breakpoint-medium) {
+    min-height: 75vh;
+  }
+}

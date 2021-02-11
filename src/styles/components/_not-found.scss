@@ -1,0 +1,48 @@
+.banner404  {
+
+  height: 80vh;
+  background: url('/src/images/moo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .intro {
+
+    font-weight: 700;
+    width: 75%;
+  
+    &__404 {
+        font-size: 3em;
+        margin-bottom: 1em;
+        color: $color-bg-alt;
+        font-family: $font404;
+        margin-left: 5%;
+    }
+  
+    &__content404 {
+        font-size: 1em;
+        margin-bottom: 1.5em;
+        line-height: 1.5em;
+        color: $color-bg-alt;
+        font-family: $font404;
+        margin-left: 5%;
+    }
+  
+    &__link404 {
+        font-size: 1em;
+        margin-bottom: 1em;
+        line-height: 1.5em;
+        color: $color-bg-alt;
+        font-family: $font404;
+        margin-left: 5%;
+
+        a {
+            text-decoration: none;
+                &:hover {
+                  color: $background-color-red;
+                }
+        }
+    }
+  }
+}
+

@@ -1,0 +1,92 @@
+.adventure {
+  &__what-to-do {
+    width: 100%;
+    background: none;
+    border: none;
+    color: $font-color;
+    padding: .5em;
+    margin: auto;
+    font-size: 1.1em;
+    &:hover {
+      text-shadow: 2px 2px 2px $hover-color;
+    }
+  }
+
+  &__choices__list {
+    font-family: 'KoHo', sans-serif;
+    margin: auto;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      padding: 5%;
+      color: $font-color;
+      text-align: center;
+    }
+
+    &__item {
+      width: 90%;
+      margin: 0 auto 5%;
+      background-color: $background-color-red;
+      box-shadow: inset .2em .2em .4em darken($background-color, 1%), inset -.4em -.4em .4em darken($background-color, 1%);
+      border-radius: 3%;
+      text-shadow: 3px 3px 3px $background-color;
+      &:hover {
+        text-shadow: 6px 6px 6px $background-color;
+      }
+    }
+  }
+}
+
+.choice-hidden {
+  visibility: hidden;
+  display: flex;
+}
+
+.choice-display {
+  display: flex;
+  animation-duration: 3s;
+  animation-name: showChoices;
+
+  @keyframes showChoices {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-large) {
+  .adventure__choices__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+      a {
+        padding: 2%;
+      }
+
+      &__item {
+      width: 35%;
+    }
+  }
+}
+
+
+@media screen and (min-width: $breakpoint-extralarge) {
+  .adventure__choices__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+      a {
+        padding: 1%;
+      }
+      
+      &__item {
+      width: 23%;
+    }
+  }
+}
+

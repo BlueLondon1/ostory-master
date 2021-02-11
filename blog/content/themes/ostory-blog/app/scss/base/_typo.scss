@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+html {
+    font-size: $font-size;
+    font-family: $font-family, $font-family-fallback;
+
+    @media (min-width: $breakpoint-medium) {
+        font-size: $font-size-medium;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $font-size-large;
+    }
+}
+
+body, a {
+    color: $font-color;
+}

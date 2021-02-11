@@ -1,0 +1,24 @@
+.searchform__box__input {
+  background-color: $font-color;
+  box-shadow: 1px 3px $font-color;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+.searchform__box__submit {
+  background-color: $font-color;
+  box-shadow: 1px 3px $font-color;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 0.5em;
+  margin-left: 0.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+}

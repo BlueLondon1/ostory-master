@@ -1,0 +1,31 @@
+{
+    "name": "christophe/wp-pattern-composer-christophe-oclock",
+    "authors": [
+        {
+            "name": "ChristopheOclock",
+            "email": "christophe@oclock.io"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^5.1",
+        "wpackagist-theme/twentynineteen": "*",
+        "wpackagist-plugin/hello-dolly": "*",
+        "wpackagist-plugin/simply-show-hooks": "^1.2",
+        "wpackagist-plugin/what-the-file": "^1.5",
+        "wpackagist-plugin/advanced-custom-fields": "^5.8",
+        "wpackagist-plugin/query-monitor": "^3.3"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "content/themes/{$name}/": ["type:wordpress-theme"]
+        }
+    }
+}
